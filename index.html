@@ -1,1 +1,339 @@
-This is not a website, and has never been a website, sigh.
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Adrià Gascón</title>
+  <meta name="description" content="Adrià Gascón — Research scientist working on cryptography, privacy-preserving machine learning, secure multi-party computation, and differential privacy.">
+  <link rel="icon" href="data:,">
+  <style>
+    :root {
+      --fg: #1a1a1a;
+      --muted: #5a5a5a;
+      --rule: #d8d4cc;
+      --bg: #fbfaf7;
+      --link: #6a3a1f;
+      --link-hover: #1a1a1a;
+      --measure: 38rem;
+    }
+    * { box-sizing: border-box; }
+    html { -webkit-text-size-adjust: 100%; }
+    body {
+      margin: 0;
+      background: var(--bg);
+      color: var(--fg);
+      font-family: "Iowan Old Style", "Charter", "Palatino", "Georgia", serif;
+      font-size: 17px;
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+    .wrap {
+      max-width: var(--measure);
+      margin: 0 auto;
+      padding: 3.5rem 1.5rem 5rem;
+    }
+    header h1 {
+      font-weight: 600;
+      font-size: 1.75rem;
+      letter-spacing: -0.01em;
+      margin: 0 0 0.15rem;
+    }
+    header .role {
+      color: var(--muted);
+      margin: 0 0 1.25rem;
+      font-style: italic;
+    }
+    header .links {
+      font-size: 0.95rem;
+      color: var(--muted);
+      margin-bottom: 2.25rem;
+    }
+    header .links a { margin-right: 0.6rem; }
+    h2 {
+      font-weight: 600;
+      font-size: 1.05rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--muted);
+      margin: 2.5rem 0 0.9rem;
+      padding-bottom: 0.35rem;
+      border-bottom: 1px solid var(--rule);
+    }
+    p { margin: 0 0 1rem; }
+    a {
+      color: var(--link);
+      text-decoration: none;
+      border-bottom: 1px solid transparent;
+      transition: border-color 120ms ease, color 120ms ease;
+    }
+    a:hover { color: var(--link-hover); border-bottom-color: var(--link-hover); }
+    .interests {
+      list-style: none;
+      padding: 0;
+      margin: 0 0 1rem;
+    }
+    .interests li {
+      padding: 0.25rem 0;
+      border-bottom: 1px dotted var(--rule);
+    }
+    .interests li:last-child { border-bottom: none; }
+    .pubs { list-style: none; padding: 0; margin: 0; }
+    .pubs li {
+      margin: 0 0 1.25rem;
+      padding-left: 0;
+    }
+    .pub-title { font-weight: 600; }
+    .pub-authors { color: var(--muted); }
+    .pub-venue { font-style: italic; color: var(--muted); }
+    .year-group {
+      font-weight: 600;
+      font-size: 0.95rem;
+      color: var(--muted);
+      margin: 1.5rem 0 0.6rem;
+      letter-spacing: 0.04em;
+    }
+    footer {
+      margin-top: 4rem;
+      padding-top: 1.25rem;
+      border-top: 1px solid var(--rule);
+      color: var(--muted);
+      font-size: 0.85rem;
+    }
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --fg: #e8e4dc;
+        --muted: #a3a097;
+        --rule: #3a3833;
+        --bg: #15140f;
+        --link: #d8a878;
+        --link-hover: #ffffff;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <header>
+      <h1>Adrià Gascón</h1>
+      <p class="role">Research scientist, Google</p>
+      <p class="links">
+        <a href="https://scholar.google.com/citations?user=M1FQ49sAAAAJ">Google Scholar</a> ·
+        <a href="https://dblp.org/pid/90/3256.html">DBLP</a> ·
+        <a href="https://www.linkedin.com/in/adri%C3%A0-gasc%C3%B3n-09069229/">LinkedIn</a>
+      </p>
+    </header>
+
+    <section>
+      <h2>About</h2>
+      <p>
+        I am a research scientist at Google working at the intersection of
+        <em>cryptography</em>, <em>privacy</em>, and <em>machine learning</em>.
+        My work focuses on designing protocols and systems that allow useful
+        computation over sensitive data.
+      </p>
+      <p>
+        Before joining Google, I was a researcher at
+        <a href="https://www.turing.ac.uk/people/researchers/adria-gascon">The Alan Turing Institute</a>
+        and the University of Edinburgh, and a postdoc at SRI International.
+        I completed my PhD at Universitat Politècnica de Catalunya in Barcelona.
+      </p>
+    </section>
+
+    <section>
+      <h2>Research interests</h2>
+      <ul class="interests">
+        <li>Privacy-preserving secure distributed computations</li>
+        <li>Privacy and security in AI systems</li>
+        <li>Formal methods and program synthesis</li>
+        <li>AI for scientific discovery</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Publications</h2>
+      <p style="color: var(--muted); font-size: 0.9rem;">
+        Selected publications only. A complete list including preprints and
+        workshop papers is available on
+        <a href="https://scholar.google.com/citations?user=M1FQ49sAAAAJ">Google Scholar</a> and
+        <a href="https://dblp.org/pid/90/3256.html">DBLP</a>.
+      </p>
+
+      <div class="year-group">2026</div>
+      <ul class="pubs">
+        <li>
+          <div class="pub-title">
+            <a href="https://sp2026.ieee-security.org/accepted-papers.html">TDXRay: Microarchitectural Side-Channel Analysis of Intel TDX for Real-World Workloads</a>
+          </div>
+          <div class="pub-authors">with T. Hornetz, H. Yavarzadeh, A. Cheu, L. Gerlach, D. Moghimi, P. Schoppmann, M. Schwarz, R. Zhang</div>
+          <div class="pub-venue">IEEE Symposium on Security and Privacy (S&amp;P), 2026</div>
+        </li>
+        <li>
+          <div class="pub-title">
+            <a href="https://www.ndss-symposium.org/ndss-paper/snpeek-side-channel-analysis-for-privacy-applications-on-confidential-vms/">SNPeek: Side-Channel Analysis for Privacy Applications on Confidential VMs</a>
+          </div>
+          <div class="pub-authors">with R. Zhang, A. Cheu, D. Moghimi, P. Schoppmann, M. Schwarz, O. Suciu</div>
+          <div class="pub-venue">Network and Distributed System Security Symposium (NDSS), 2026</div>
+        </li>
+      </ul>
+
+      <div class="year-group">2025</div>
+      <ul class="pubs">
+        <li>
+          <div class="pub-title">
+            <a href="https://openreview.net/forum?id=0ZnXGzLcOg">Privacy Reasoning in Ambiguous Contexts</a>
+          </div>
+          <div class="pub-authors">with R. Yi, O. Suciu, S. Meiklejohn, E. Bagdasarian, M. Gruteser</div>
+          <div class="pub-venue">Conference on Neural Information Processing Systems (NeurIPS), 2025</div>
+        </li>
+        <li>
+          <div class="pub-title">
+            <a href="https://doi.org/10.1145/3719027.3744862">Founding Zero-Knowledge Proofs of Training on Optimum Vicinity</a>
+          </div>
+          <div class="pub-authors">with G. Tan, S. Meiklejohn, M. Raykova, X. Wang, N. Luo</div>
+          <div class="pub-venue">ACM Conference on Computer and Communications Security (CCS), 2025</div>
+        </li>
+        <li>
+          <div class="pub-title">
+            <a href="https://doi.org/10.1007/978-3-032-01913-4_9">Willow: Secure Aggregation with One-Shot Clients</a>
+          </div>
+          <div class="pub-authors">with J. Bell-Clark, B. Li, M. Raykova, P. Schoppmann</div>
+          <div class="pub-venue">CRYPTO, 2025</div>
+        </li>
+        <li>
+          <div class="pub-title">
+            <a href="https://doi.org/10.1109/SP61157.2025.00186">Hash-Prune-Invert: Improved Differentially Private Heavy-Hitter Detection in the Two-Server Model</a>
+          </div>
+          <div class="pub-authors">with B. Balle, J. Bell-Clark, A. Cheu, J. Katz, M. Raykova, P. Schoppmann, T. Steinke</div>
+          <div class="pub-venue">IEEE Symposium on Security and Privacy (S&amp;P), 2025</div>
+        </li>
+      </ul>
+
+      <div class="year-group">2024</div>
+      <ul class="pubs">
+        <li>
+          <div class="pub-title">
+            <a href="https://dl.acm.org/doi/10.1145/3658644.3670391">Computationally Secure Aggregation and Private Information Retrieval in the Shuffle Model</a>
+          </div>
+          <div class="pub-authors">with Y. Ishai, M. Kelkar, B. Li, Y. Ma, M. Raykova</div>
+          <div class="pub-venue">ACM Conference on Computer and Communications Security (CCS), 2024</div>
+        </li>
+      </ul>
+
+      <div class="year-group">2023</div>
+      <ul class="pubs">
+        <li>
+          <div class="pub-title">
+            <a href="https://dl.acm.org/doi/10.1145/3576915.3623215">Amplification by Shuffling without Shuffling</a>
+          </div>
+          <div class="pub-authors">with B. Balle, J. Bell-Clark</div>
+          <div class="pub-venue">ACM Conference on Computer and Communications Security (CCS), 2023</div>
+        </li>
+        <li>
+          <div class="pub-title">
+            <a href="https://www.usenix.org/conference/usenixsecurity23/presentation/bell">ACORN: Input Validation for Secure Aggregation</a>
+          </div>
+          <div class="pub-authors">with J. Bell, T. Lepoint, B. Li, S. Meiklejohn, M. Raykova, C. Yun</div>
+          <div class="pub-venue">USENIX Security Symposium, 2023</div>
+        </li>
+        <li>
+          <div class="pub-title">
+            <a href="https://proceedings.mlr.press/v202/gascon23a/gascon23a.pdf">Federated Heavy Hitter Recovery under Linear Sketching</a>
+          </div>
+          <div class="pub-authors">with P. Kairouz, Z. Sun, A. T. Suresh</div>
+          <div class="pub-venue">International Conference on Machine Learning (ICML), 2023</div>
+        </li>
+      </ul>
+
+      <div class="year-group">2022</div>
+      <ul class="pubs">
+        <li>
+          <div class="pub-title">
+            <a href="https://research.google/pubs/distributed-private-sparse-histograms-in-the-two-server-model/">Distributed, Private, Sparse Histograms in the Two-Server Model</a>
+          </div>
+          <div class="pub-authors">with B. Ghazi, J. Bell, M. Raykova, P. Manurangsi, P. Schoppmann, R. Kumar</div>
+          <div class="pub-venue">ACM Conference on Computer and Communications Security (CCS), 2022</div>
+        </li>
+        <li>
+          <div class="pub-title">
+            <a href="https://petsymposium.org/popets/2022/popets-2022-0104.php">Towards Sparse Federated Analytics: Location Heatmaps under Distributed Differential Privacy with Secure Aggregation</a>
+          </div>
+          <div class="pub-authors">with E. Bagdasaryan, P. Kairouz, S. Mellem, K. Bonawitz, D. Estrin, M. Gruteser</div>
+          <div class="pub-venue">Proceedings on Privacy Enhancing Technologies (PoPETs), 2022</div>
+        </li>
+      </ul>
+
+      <div class="year-group">Previous publications</div>
+      <ul class="pubs">
+        <li>
+          <div class="pub-title">
+            <a href="https://www.nowpublishers.com/article/Details/MAL-083">Advances and Open Problems in Federated Learning</a>
+          </div>
+          <div class="pub-authors">with P. Kairouz, H. B. McMahan, and 55 other coauthors (full list in publication)</div>
+          <div class="pub-venue">Foundations and Trends in Machine Learning, Vol. 14, 2021</div>
+        </li>
+        <li>
+          <div class="pub-title">
+            <a href="https://dl.acm.org/doi/10.1145/3372297.3417242">Private Summation in the Multi-Message Shuffle Model</a>
+          </div>
+          <div class="pub-authors">with B. Balle, J. Bell, K. Nissim</div>
+          <div class="pub-venue">ACM Conference on Computer and Communications Security (CCS), 2020</div>
+        </li>
+        <li>
+          <div class="pub-title">
+            <a href="https://petsymposium.org/popets/2020/popets-2020-0024.php">Secure and Scalable Document Similarity on Distributed Databases: Differential Privacy to the Rescue</a>
+          </div>
+          <div class="pub-authors">with P. Schoppmann, L. Vogelsang, B. Balle</div>
+          <div class="pub-venue">Proceedings on Privacy Enhancing Technologies (PoPETs), 2020</div>
+        </li>
+        <li>
+          <div class="pub-title">
+            <a href="https://link.springer.com/chapter/10.1007/978-3-030-26951-7_22">The Privacy Blanket of the Shuffle Model</a>
+          </div>
+          <div class="pub-authors">with B. Balle, J. Bell, K. Nissim</div>
+          <div class="pub-venue">CRYPTO, 2019</div>
+        </li>
+        <li>
+          <div class="pub-title">
+            <a href="https://dl.acm.org/doi/10.1145/3319535.3339819">QUOTIENT: Two-Party Secure Neural Network Training and Prediction</a>
+          </div>
+          <div class="pub-authors">with N. Agrawal, A. Shahin Shamsabadi, M. J. Kusner</div>
+          <div class="pub-venue">ACM Conference on Computer and Communications Security (CCS), 2019</div>
+        </li>
+        <li>
+          <div class="pub-title">
+            <a href="https://dl.acm.org/doi/10.1145/3319535.3339816">Make Some ROOM for the Zeros: Data Sparsity in Secure Distributed Machine Learning</a>
+          </div>
+          <div class="pub-authors">with P. Schoppmann, M. Raykova, B. Pinkas</div>
+          <div class="pub-venue">ACM Conference on Computer and Communications Security (CCS), 2019</div>
+        </li>
+        <li>
+          <div class="pub-title">
+            <a href="https://proceedings.mlr.press/v80/sanyal18a.html">TAPAS: Tricks to Accelerate (encrypted) Prediction as a Service</a>
+          </div>
+          <div class="pub-authors">with A. Sanyal, M. J. Kusner, V. Kanade</div>
+          <div class="pub-venue">International Conference on Machine Learning (ICML), 2018</div>
+        </li>
+        <li>
+          <div class="pub-title">
+            <a href="https://link.springer.com/chapter/10.1007/978-3-319-21401-6_33">Program Synthesis Using Dual Interpretation</a>
+          </div>
+          <div class="pub-authors">with A. Tiwari, B. Dutertre</div>
+          <div class="pub-venue">Conference on Automated Deduction (CADE), 2015</div>
+        </li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Contact</h2>
+      <p>
+        Email: <a href="mailto:adriagascon@gmail.com">adriagascon@gmail.com</a>
+      </p>
+    </section>
+
+    <footer>
+      <p>Last updated: May 2026.</p>
+    </footer>
+  </div>
+</body>
+</html>
