@@ -93,6 +93,34 @@
       margin: 1.5rem 0 0.6rem;
       letter-spacing: 0.04em;
     }
+    details.previous { margin-top: 1.5rem; }
+    details.previous > summary {
+      font-weight: 600;
+      font-size: 0.95rem;
+      color: var(--muted);
+      letter-spacing: 0.04em;
+      cursor: pointer;
+      padding: 0.3rem 0;
+      list-style: none;
+      display: flex;
+      align-items: center;
+      gap: 0.4rem;
+      user-select: none;
+    }
+    details.previous > summary::-webkit-details-marker { display: none; }
+    details.previous > summary::before {
+      content: "▸";
+      font-size: 0.8rem;
+      transition: transform 150ms ease;
+      display: inline-block;
+    }
+    details.previous[open] > summary::before { transform: rotate(90deg); }
+    details.previous > summary:hover { color: var(--fg); }
+    details.previous > .pubs { margin-top: 0.6rem; }
+    .talks { list-style: none; padding: 0; margin: 0; }
+    .talks li { margin: 0 0 1rem; }
+    .talk-title { font-weight: 600; }
+    .talk-venue { color: var(--muted); font-style: italic; }
     footer {
       margin-top: 4rem;
       padding-top: 1.25rem;
@@ -209,105 +237,119 @@
         </li>
       </ul>
 
-      <div class="year-group">Previous publications</div>
-      <ul class="pubs">
+      <details class="previous">
+        <summary>Previous publications</summary>
+        <ul class="pubs">
+          <li>
+            <div class="pub-title">
+              <a href="https://dl.acm.org/doi/10.1145/3658644.3670391">Computationally Secure Aggregation and Private Information Retrieval in the Shuffle Model</a>
+            </div>
+            <div class="pub-authors">with Y. Ishai, M. Kelkar, B. Li, Y. Ma, M. Raykova</div>
+            <div class="pub-venue">ACM Conference on Computer and Communications Security (CCS), 2024</div>
+          </li>
+          <li>
+            <div class="pub-title">
+              <a href="https://dl.acm.org/doi/10.1145/3576915.3623215">Amplification by Shuffling without Shuffling</a>
+            </div>
+            <div class="pub-authors">with B. Balle, J. Bell-Clark</div>
+            <div class="pub-venue">ACM Conference on Computer and Communications Security (CCS), 2023</div>
+          </li>
+          <li>
+            <div class="pub-title">
+              <a href="https://www.usenix.org/conference/usenixsecurity23/presentation/bell">ACORN: Input Validation for Secure Aggregation</a>
+            </div>
+            <div class="pub-authors">with J. Bell, T. Lepoint, B. Li, S. Meiklejohn, M. Raykova, C. Yun</div>
+            <div class="pub-venue">USENIX Security Symposium, 2023</div>
+          </li>
+          <li>
+            <div class="pub-title">
+              <a href="https://proceedings.mlr.press/v202/gascon23a/gascon23a.pdf">Federated Heavy Hitter Recovery under Linear Sketching</a>
+            </div>
+            <div class="pub-authors">with P. Kairouz, Z. Sun, A. T. Suresh</div>
+            <div class="pub-venue">International Conference on Machine Learning (ICML), 2023</div>
+          </li>
+          <li>
+            <div class="pub-title">
+              <a href="https://research.google/pubs/distributed-private-sparse-histograms-in-the-two-server-model/">Distributed, Private, Sparse Histograms in the Two-Server Model</a>
+            </div>
+            <div class="pub-authors">with B. Ghazi, J. Bell, M. Raykova, P. Manurangsi, P. Schoppmann, R. Kumar</div>
+            <div class="pub-venue">ACM Conference on Computer and Communications Security (CCS), 2022</div>
+          </li>
+          <li>
+            <div class="pub-title">
+              <a href="https://petsymposium.org/popets/2022/popets-2022-0104.php">Towards Sparse Federated Analytics: Location Heatmaps under Distributed Differential Privacy with Secure Aggregation</a>
+            </div>
+            <div class="pub-authors">with E. Bagdasaryan, P. Kairouz, S. Mellem, K. Bonawitz, D. Estrin, M. Gruteser</div>
+            <div class="pub-venue">Proceedings on Privacy Enhancing Technologies (PoPETs), 2022</div>
+          </li>
+          <li>
+            <div class="pub-title">
+              <a href="https://www.nowpublishers.com/article/Details/MAL-083">Advances and Open Problems in Federated Learning</a>
+            </div>
+            <div class="pub-authors">with P. Kairouz, H. B. McMahan, and 55 other coauthors (full list in publication)</div>
+            <div class="pub-venue">Foundations and Trends in Machine Learning, Vol. 14, 2021</div>
+          </li>
+          <li>
+            <div class="pub-title">
+              <a href="https://dl.acm.org/doi/10.1145/3372297.3417242">Private Summation in the Multi-Message Shuffle Model</a>
+            </div>
+            <div class="pub-authors">with B. Balle, J. Bell, K. Nissim</div>
+            <div class="pub-venue">ACM Conference on Computer and Communications Security (CCS), 2020</div>
+          </li>
+          <li>
+            <div class="pub-title">
+              <a href="https://petsymposium.org/popets/2020/popets-2020-0024.php">Secure and Scalable Document Similarity on Distributed Databases: Differential Privacy to the Rescue</a>
+            </div>
+            <div class="pub-authors">with P. Schoppmann, L. Vogelsang, B. Balle</div>
+            <div class="pub-venue">Proceedings on Privacy Enhancing Technologies (PoPETs), 2020</div>
+          </li>
+          <li>
+            <div class="pub-title">
+              <a href="https://link.springer.com/chapter/10.1007/978-3-030-26951-7_22">The Privacy Blanket of the Shuffle Model</a>
+            </div>
+            <div class="pub-authors">with B. Balle, J. Bell, K. Nissim</div>
+            <div class="pub-venue">CRYPTO, 2019</div>
+          </li>
+          <li>
+            <div class="pub-title">
+              <a href="https://dl.acm.org/doi/10.1145/3319535.3339819">QUOTIENT: Two-Party Secure Neural Network Training and Prediction</a>
+            </div>
+            <div class="pub-authors">with N. Agrawal, A. Shahin Shamsabadi, M. J. Kusner</div>
+            <div class="pub-venue">ACM Conference on Computer and Communications Security (CCS), 2019</div>
+          </li>
+          <li>
+            <div class="pub-title">
+              <a href="https://dl.acm.org/doi/10.1145/3319535.3339816">Make Some ROOM for the Zeros: Data Sparsity in Secure Distributed Machine Learning</a>
+            </div>
+            <div class="pub-authors">with P. Schoppmann, M. Raykova, B. Pinkas</div>
+            <div class="pub-venue">ACM Conference on Computer and Communications Security (CCS), 2019</div>
+          </li>
+          <li>
+            <div class="pub-title">
+              <a href="https://proceedings.mlr.press/v80/sanyal18a.html">TAPAS: Tricks to Accelerate (encrypted) Prediction as a Service</a>
+            </div>
+            <div class="pub-authors">with A. Sanyal, M. J. Kusner, V. Kanade</div>
+            <div class="pub-venue">International Conference on Machine Learning (ICML), 2018</div>
+          </li>
+          <li>
+            <div class="pub-title">
+              <a href="https://link.springer.com/chapter/10.1007/978-3-319-21401-6_33">Program Synthesis Using Dual Interpretation</a>
+            </div>
+            <div class="pub-authors">with A. Tiwari, B. Dutertre</div>
+            <div class="pub-venue">Conference on Automated Deduction (CADE), 2015</div>
+          </li>
+        </ul>
+      </details>
+    </section>
+
+    <section>
+      <h2>Recent talks</h2>
+      <ul class="talks">
         <li>
-          <div class="pub-title">
-            <a href="https://dl.acm.org/doi/10.1145/3658644.3670391">Computationally Secure Aggregation and Private Information Retrieval in the Shuffle Model</a>
+          <div class="talk-title">
+            <a href="https://www.youtube.com/watch?v=zXOpzGShnC0">Tutorial: Security</a>
           </div>
-          <div class="pub-authors">with Y. Ishai, M. Kelkar, B. Li, Y. Ma, M. Raykova</div>
-          <div class="pub-venue">ACM Conference on Computer and Communications Security (CCS), 2024</div>
-        </li>
-        <li>
-          <div class="pub-title">
-            <a href="https://dl.acm.org/doi/10.1145/3576915.3623215">Amplification by Shuffling without Shuffling</a>
-          </div>
-          <div class="pub-authors">with B. Balle, J. Bell-Clark</div>
-          <div class="pub-venue">ACM Conference on Computer and Communications Security (CCS), 2023</div>
-        </li>
-        <li>
-          <div class="pub-title">
-            <a href="https://www.usenix.org/conference/usenixsecurity23/presentation/bell">ACORN: Input Validation for Secure Aggregation</a>
-          </div>
-          <div class="pub-authors">with J. Bell, T. Lepoint, B. Li, S. Meiklejohn, M. Raykova, C. Yun</div>
-          <div class="pub-venue">USENIX Security Symposium, 2023</div>
-        </li>
-        <li>
-          <div class="pub-title">
-            <a href="https://proceedings.mlr.press/v202/gascon23a/gascon23a.pdf">Federated Heavy Hitter Recovery under Linear Sketching</a>
-          </div>
-          <div class="pub-authors">with P. Kairouz, Z. Sun, A. T. Suresh</div>
-          <div class="pub-venue">International Conference on Machine Learning (ICML), 2023</div>
-        </li>
-        <li>
-          <div class="pub-title">
-            <a href="https://research.google/pubs/distributed-private-sparse-histograms-in-the-two-server-model/">Distributed, Private, Sparse Histograms in the Two-Server Model</a>
-          </div>
-          <div class="pub-authors">with B. Ghazi, J. Bell, M. Raykova, P. Manurangsi, P. Schoppmann, R. Kumar</div>
-          <div class="pub-venue">ACM Conference on Computer and Communications Security (CCS), 2022</div>
-        </li>
-        <li>
-          <div class="pub-title">
-            <a href="https://petsymposium.org/popets/2022/popets-2022-0104.php">Towards Sparse Federated Analytics: Location Heatmaps under Distributed Differential Privacy with Secure Aggregation</a>
-          </div>
-          <div class="pub-authors">with E. Bagdasaryan, P. Kairouz, S. Mellem, K. Bonawitz, D. Estrin, M. Gruteser</div>
-          <div class="pub-venue">Proceedings on Privacy Enhancing Technologies (PoPETs), 2022</div>
-        </li>
-        <li>
-          <div class="pub-title">
-            <a href="https://www.nowpublishers.com/article/Details/MAL-083">Advances and Open Problems in Federated Learning</a>
-          </div>
-          <div class="pub-authors">with P. Kairouz, H. B. McMahan, and 55 other coauthors (full list in publication)</div>
-          <div class="pub-venue">Foundations and Trends in Machine Learning, Vol. 14, 2021</div>
-        </li>
-        <li>
-          <div class="pub-title">
-            <a href="https://dl.acm.org/doi/10.1145/3372297.3417242">Private Summation in the Multi-Message Shuffle Model</a>
-          </div>
-          <div class="pub-authors">with B. Balle, J. Bell, K. Nissim</div>
-          <div class="pub-venue">ACM Conference on Computer and Communications Security (CCS), 2020</div>
-        </li>
-        <li>
-          <div class="pub-title">
-            <a href="https://petsymposium.org/popets/2020/popets-2020-0024.php">Secure and Scalable Document Similarity on Distributed Databases: Differential Privacy to the Rescue</a>
-          </div>
-          <div class="pub-authors">with P. Schoppmann, L. Vogelsang, B. Balle</div>
-          <div class="pub-venue">Proceedings on Privacy Enhancing Technologies (PoPETs), 2020</div>
-        </li>
-        <li>
-          <div class="pub-title">
-            <a href="https://link.springer.com/chapter/10.1007/978-3-030-26951-7_22">The Privacy Blanket of the Shuffle Model</a>
-          </div>
-          <div class="pub-authors">with B. Balle, J. Bell, K. Nissim</div>
-          <div class="pub-venue">CRYPTO, 2019</div>
-        </li>
-        <li>
-          <div class="pub-title">
-            <a href="https://dl.acm.org/doi/10.1145/3319535.3339819">QUOTIENT: Two-Party Secure Neural Network Training and Prediction</a>
-          </div>
-          <div class="pub-authors">with N. Agrawal, A. Shahin Shamsabadi, M. J. Kusner</div>
-          <div class="pub-venue">ACM Conference on Computer and Communications Security (CCS), 2019</div>
-        </li>
-        <li>
-          <div class="pub-title">
-            <a href="https://dl.acm.org/doi/10.1145/3319535.3339816">Make Some ROOM for the Zeros: Data Sparsity in Secure Distributed Machine Learning</a>
-          </div>
-          <div class="pub-authors">with P. Schoppmann, M. Raykova, B. Pinkas</div>
-          <div class="pub-venue">ACM Conference on Computer and Communications Security (CCS), 2019</div>
-        </li>
-        <li>
-          <div class="pub-title">
-            <a href="https://proceedings.mlr.press/v80/sanyal18a.html">TAPAS: Tricks to Accelerate (encrypted) Prediction as a Service</a>
-          </div>
-          <div class="pub-authors">with A. Sanyal, M. J. Kusner, V. Kanade</div>
-          <div class="pub-venue">International Conference on Machine Learning (ICML), 2018</div>
-        </li>
-        <li>
-          <div class="pub-title">
-            <a href="https://link.springer.com/chapter/10.1007/978-3-319-21401-6_33">Program Synthesis Using Dual Interpretation</a>
-          </div>
-          <div class="pub-authors">with A. Tiwari, B. Dutertre</div>
-          <div class="pub-venue">Conference on Automated Deduction (CADE), 2015</div>
+          <div class="talk-venue">Federated and Collaborative Learning Boot Camp, Simons Institute, January 2026</div>
         </li>
       </ul>
     </section>
